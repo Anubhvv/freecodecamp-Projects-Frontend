@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<style>
+    .full{
+        
+    }
+    .full::after{
+        content:"";
+        z-index: -2;
+        position:fixed;
+        top:0px;
+        bottom:0px;
+        right:0px;
+        left:0px;
+        background-image:url("https://wallpapercrafter.com/desktop/40880-Railing-4k-4K-HD-wallpaper-night-bokeh.jpg");
+    }
+
+    #top-heading{
+        color:rgb(209, 250, 248);
+        text-align: center;
+    }
+    #title{
+        font-family:monospace;
+        font-weight: lighter;
+        font-size:33px; 
+    }
+    #description{
+        font-family:monospace;
+        font-weight:lighter;
+        font-size:15px;
+    }
+    #survey-form{
+        position: relative;
+        border-style: ;
+        padding:3% 7% 2% 7%;
+        width:400px;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        font-family: Helvetica, sans-serif;
+        font-weight:bold;
+        font-size:22px;
+        color:rgb(216, 240, 245);
+        display:grid;
+        grid-row-gap:18px;
+        justify-items:center;
+    }
+    #survey-form::after{
+        content:"";
+        z-index: -1;
+        
+        background:linear-gradient(90deg,rgb(8, 84, 134),black);
+        border-radius: 20px;
+        position: absolute;
+        top:0px;
+        bottom:0px;
+        left:0px;
+        right:0px;
+        opacity:0.3;
+
+    }
+  .input-container{
+     
+      height:30px;
+      width:400px;
+      background-color: rgb(187, 228, 245);
+      
+      border-radius: 7px;
+      
+  }
+  
+  #submit{
+      margin:auto;
+      padding:5% 10%;
+      border-radius:12px;
+      background-color: rgb(62, 137, 223);
+      color:White;
+  }
+  #Secret-message{
+      height:100px;
+  }
+  .radio{
+      font-weight:lighter;
+      font-size:20px
+  }
+   .check-opt{
+    font-weight: lighter;
+    font-size:20px
+   } 
+</style>
+<html>
+    <main>
+        <head>
+            <title>Survey</title>
+        </head>
+        <body class="full">
+            <div id="top-heading"> 
+                <h1 id="title">Demo Survey Form</h1>
+                <p id="description">We just need some information.</p>
+            </div>
+            <form id="survey-form">
+                <label for="name">Name:<br>
+                <input class="input-container" id="name" type="text" required placeholder="Enter you beautiful magnificent magical Name">
+                </label>
+                <label  for="email">Email:<br>
+                <input class="input-container" id="email"  type="email" required placeholder="Enter your delicious e-mail id please."></label>
+                <label  for="number-label">Age: <br>
+                <input class="input-container" id="number-label" type="number" min="0" max="150" required placeholder="age"></label>
+                <label  for="dropdown">Who is your favourite superhero?<br>
+                <select id="dropdown" class="input-container" name="favourite-hero">
+                    <option>Iron-Man</option>
+                    <option >captain America</option>
+                    <option>Black Widow</option>
+                    <option>Spider-Man</option>
+                    <option>Batman</option>
+                    <option>Wonder Woman</option>
+                    <option selected>other</option>
+                </select></label>
+                <fieldset id="field-set">
+                    <legend>How much do you like me?</legend>
+                        <input  type="radio" id="very-much" name="Like-me">
+                        <label class="radio" for="very-much">Very much</label>
+                        <input  type="radio" id="somewhat" name="Like-me">
+                        <label class="radio" for="somewhat">somewhat</label>
+                </fieldset>
+                <label  for="checkboxes">Which of the following things are already done in your life?<br>
+                    <input  id="sky-diving" type="checkbox" name="checkboxes" value="skydive">
+                    <label class="check-opt" for="sky-diving">Sky-diving</label>
+                    <br>
+                    <input   id="bungee" type="checkbox" name="checkboxes" value="bungee">
+                    <label class="check-opt" for="bungee">Bungee jumping</label>
+                </label>
+                <label for="Secret-message">Tell me anything:<br>
+                    <textarea class="input-container" id="Secret-message" placeholder="Enter any message for me "></textarea>
+                </label>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </body>
+    </main>
+</html>
