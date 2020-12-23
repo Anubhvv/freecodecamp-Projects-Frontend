@@ -72,11 +72,14 @@
   }
   
   #submit{
-      margin:auto;
-      padding:5% 10%;
-      border-radius:12px;
+      width:100%;
+      padding:3% 10%;
+      margin:15px;
+      border-radius:5px;
       background-color: rgb(62, 137, 223);
       color:White;
+      font-size:22px;
+      
   }
   #Secret-message{
       height:100px;
@@ -88,7 +91,17 @@
    .check-opt{
     font-weight: lighter;
     font-size:20px
+   }
+   #foot{
+      color:white;
+       
+       z-index: -1;
+       text-align: right;
+       font-family:verdana
    } 
+   .anchor{
+       color: rgb(62, 137, 223);
+   }
 </style>
 <html>
     <main>
@@ -137,6 +150,9 @@
                 </label>
                 <button type="submit" id="submit">Submit</button>
             </form>
+            <footer id="foot">
+                <p>A part of <a class="anchor" href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/" target="_blank">freecodecamp.org</a> projects, visit my github: <a class="anchor" href="https://github.com/Anubhvv" target="_blank">Github Profile</a>.</p>
+            </footer>
         </body>
     </main>
 </html>
